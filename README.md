@@ -1,1 +1,0 @@
-# mypokedex.github.io

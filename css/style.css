@@ -1,0 +1,114 @@
+*{
+	padding: 0px;
+	margin: 0px;
+}
+a:hover{
+    text-decoration: none;
+}
+
+header{
+    width: 50%;
+    margin-left: 25%;
+    margin-top: 30px;
+    height: auto;
+    min-height: 70px;
+    text-align: center;
+    border: 1px solid black;
+    margin-bottom: 50px;
+}
+
+header h1{
+	margin-top:10px;
+	font-weight: bold;
+    letter-spacing: 5px;
+    font-size: 4em;
+}
+#content{
+    width: 90%;
+    margin-left:5%;
+}
+ #content .oll .caption .name{
+    text-align: center;
+    color: black
+ } 
+ #content .oll img{
+    width: 100px;
+    height: 100px;
+ } 
+
+ #content .information .one{
+           margin-top: 240px;
+ } 
+ #content .information .one .caption a{
+           color: black;
+           text-align: center;
+           font-size: 30px;
+       }
+
+        #content .oll .caption a.type{
+          margin-left: 3%;
+          height: 25px;
+          padding-top: 0px;
+       }
+
+ #content .information .one .caption h3{
+           font-size: 1em;
+       }
+
+ #content .information .one .caption table{
+           border:1px solid black;
+           width: 100%;
+           font-size: 1.3em;
+           color: black;
+ } 
+  #content .information .one .caption table tr td:first-child{
+           border:1px solid black;
+           text-align: center;
+           width: 80%;
+           height: 35px;
+ }
+ #content .information .one .caption table tr td:last-child{
+           border:1px solid black;
+           text-align: center;
+           width: 20%;
+ } 
+
+ #content a.LoadMore{
+    width: 95%;
+    margin-left:2.5%;
+    height: 50px;
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+#informationGoto{
+  display: none;
+}
+
+#informationGoto img{
+  width: 200px;
+  height: 200px;
+}
+
+#informationGoto span{
+  padding:0 4%;
+ 
+}
+
+@media screen and (max-width: 767px){
+  header{
+    width: 100%;
+    margin-left: 0px;
+    margin-top: 15px;
+  }
+  header h1{
+  margin-top:10px;
+  font-weight: bold;
+    letter-spacing: 0px;
+    font-size: 3em;
+}
+ #content .oll img{
+    width: 200px;
+    height: 200px;
+ } 
+}

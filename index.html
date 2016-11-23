@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="pockemonApp">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  <title>Pockemon</title>
+
+  <!-- Bootstrap -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+  <script src="js/angular.min.js"></script>
+  <script src="js/myJs.js"></script>
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+      <![endif]-->
+    </head>
+    <body ng-controller="pockemonCtrl">
+     <header>
+      <h1>Pokedex</h1>
+    </header>
+
+    <div id="content">
+
+     <div class="row">
+      <div class="col-md-7 oll">
+        <div class="col-sm-6 col-md-4" ng-repeat="pockemon in pockemons">
+          <div class="thumbnail">
+            <img src={{pockemon.imgurl}}>
+            <div class="caption">
+              <a class="name" ng-click="moreInformation($index)" href="#informationGoto"><h3>{{pockemon.name}}</h3></a>
+              <a href="#" class="btn btn-primary type" data-toggle="tooltip" title="підказка" ng-repeat="type in pockemon.types" >{{type.name}}</a>
+            </div>
+          </div>    
+        </div>
+
+
+
+        <a ng-click="Load()"  class="btn btn-primary LoadMore" data-toggle="tooltip" title="підказка">Load More</a>
+      </div>
+      
+      <div class="col-md-5 information" id="informationGoto">
+        <div class="col-md-8 one">
+         <div class="thumbnail">
+          <img src="{{ollInformationAboutPockemon.imgurl}}">
+          <div class="caption">
+            <a href=""><h3>{{namePockemon}}</h3></a>
+            <table>
+             <tbody>
+               <tr><td>Type</td> <td><span ng-repeat="type in ollInformationAboutPockemon.types">{{type.name}}</span></td></tr>
+               <tr><td>Attack</td> <td>{{ollInformationAboutPockemon.attack}}</td></tr>
+               <tr><td>Defense</td> <td>{{ollInformationAboutPockemon.defense}}</td></tr>
+               <tr><td>HP</td> <td>{{ollInformationAboutPockemon.hp}}</td></tr>
+               <tr><td>SP Attack</td> <td>{{ollInformationAboutPockemon.sp_atk}}</td></tr>
+               <tr><td>SP Defense</td> <td>{{ollInformationAboutPockemon.sp_def}}</td></tr>
+               <tr><td>Speed</td> <td>{{ollInformationAboutPockemon.speed}}</td></tr>
+               <tr><td>Weigth</td> <td>{{ollInformationAboutPockemon.weight}}</td></tr>
+               <tr><td>Total moves</td> <td>{{totalMoves}}</td></tr>
+
+
+             </tbody>
+           </table>
+         </div>
+       </div>
+     </div>   
+   </div>
+ </div>
+
+</div>
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="js/bootstrap.min.js"></script>
+</body>
+</html>
